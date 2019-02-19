@@ -1,3 +1,4 @@
+
 # set :session_secret, 'super secret'
 require 'sinatra'
 
@@ -9,5 +10,6 @@ end
 get '/named-cat' do
   p :name
   @name = params[:name]
+  @color = params[:color]
   erb(:index)
 end
